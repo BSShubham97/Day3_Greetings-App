@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,5 +28,8 @@ public class GreetingService implements IGreetingService {
     public User getGreetById(int id) {
         Optional<User> greetById = iGreetingRepository.findById(id);
         return greetById.orElse(null);
+    }
+    public List<User> getAllMessage() {
+        return iGreetingRepository.findAll();
     }
 }
