@@ -12,5 +12,6 @@ public interface IGreetingService {
     public String getCustomMessage(UserDto userDto) ;
     public User getGreetById(int id);
     public List<User> getAllMessage();
+    public String deleteGreet(int id);
 
 }

@@ -32,5 +32,9 @@ public class GreetingController {
     public List<User> findAllGreeting() {
         return greetingService.getAllMessage();
     }
+    @DeleteMapping("/delete_greet/{id}")
+    public String deleteGreet(@PathVariable int id) {
+        return greetingService.deleteGreet(id);
+    }
 }
 
