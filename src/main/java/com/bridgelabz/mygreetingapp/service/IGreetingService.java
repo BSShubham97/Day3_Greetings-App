@@ -13,5 +13,6 @@ public interface IGreetingService {
     public User getGreetById(int id);
     public List<User> getAllMessage();
     public String deleteGreet(int id);
+    public User updateMessage(int id, UserDto userDto);
 
 }

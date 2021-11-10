@@ -36,5 +36,10 @@ public class GreetingController {
     public String deleteGreet(@PathVariable int id) {
         return greetingService.deleteGreet(id);
     }
+    @PutMapping("/edit_message/{id}")
+    public User editMesage(@PathVariable int id, @RequestBody UserDto userDto) {
+        return greetingService.updateMessage(id, userDto);
+
+    }
 }
 
