@@ -2,6 +2,7 @@ package com.bridgelabz.mygreetingapp.controller;
 
 import com.bridgelabz.mygreetingapp.dto.UserDto;
 import com.bridgelabz.mygreetingapp.service.GreetingService;
+import com.bridgelabz.mygreetingapp.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/greet")
 public class GreetingController {
     @Autowired
-    private GreetingService greetingService;
+    private IGreetingService greetingService;
 
     @GetMapping(value={"/", " "})
     public String getWelcomeMessage() {
